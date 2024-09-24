@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech2 etc Tutorial</title>
+    <link rel="stylesheet" href="style6.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+   </head>
+      <body>
+        <div id="table">
+          <div id="centeralign">
+             <h1>Auto Typing Effect</h1>
+             <p>
+                At Omar Hospital, we are dedicated to providing exceptional healthcare services with compassion and care. Our team of experienced professionals is here to ensure your well-being and comfort. 
+         Whether you’re visiting for a routine check-up or specialized treatment, we are committed to offering personalized care tailored to your needs. Explore our website to learn more about our services, meet our medical team, and discover how we can support your health journey. Your health is our priority, and we are here to serve you with excellence.
+         Thank you for choosing Omar Hospital. Your health, our mission.</p>
+             
+          </div>
+        </div>
+        <script>
+               
+            function typeEffect(element, speed){
+                var text =element. innerHTML;
+                element.innerHTML="";
+
+                var i=0;
+                var timer=setInterval(function(){
+                    if (i < text.length){
+                       element.append(text.charAt(i));
+                       i++;
+                    }else{
+                       clearInterval(timer);
+                    }
+                }, speed);
+            }
+            var speed=75;
+            var h1=document.querySelector('h1');
+           /* var p=document.querySelector('p');
+            var delay =h1.innerHTML.length * speed + speed;
+
+            typeEffect(h1, speed);*/
+
+
+            setTimeout(function(){
+            h1.style.display="inline-block";
+              typeEffect(h1, speed);
+            },delay);
+       </script>
+
+      </body>
+     </html>
